@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Investigation 3 | Geometry of Scoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">Geometry of Scoring</a>
+    <nav>
+      <a href="index.html" class="">Home</a>
+      <a href="notice.html" class="">1. Notice</a>
+      <a href="investigation1.html" class="">2.1 Angle</a>
+      <a href="investigation2.html" class="">2.2 Distance</a>
+      <a href="investigation3.html" class="active">2.3 Goalkeeper</a>
+      <a href="create.html" class="">3. Create</a>
+      <a href="reflection.html" class="">4. Reflect</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+<section class="page-head"><div class="container"><div class="card">
+  <span class="kicker">Section 2.3</span>
+  <h2>Investigation 3 — Goalkeeper Positioning</h2>
+  <p class="section-intro">A shot is not only about the player and the goal. The goalkeeper also changes the geometry by blocking part of the open view.</p>
+</div></div></section>
+
+<section class="section">
+  <div class="container">
+    <div class="card real-evidence">
+      <h3>My goalkeeper reference photos</h3>
+      <div class="photo-grid">
+        <div><img src="images/center-shot-arms.jpeg" class="project-photo medium" alt="Goalkeeper reference with arms extended in front of the goal"><p class="photo-caption">Arms extended: this makes the goalkeeper's effective width easier to notice.</p></div>
+        <div><img src="images/center-shot-standing.jpeg" class="project-photo medium" alt="Goalkeeper reference standing in front of the goal"><p class="photo-caption">Standing position: a second reference for how the keeper appears from the shooter's view.</p></div>
+      </div>
+      <p class="photo-caption">These photos support the idea of visual coverage. The forward-movement comparison below is still a simplified mathematical model, not a measurement taken directly from these photos.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container visual-grid">
+    <div class="card">
+      <h3>Visual 1 — Goalkeeper on the goal line</h3>
+      <svg viewBox="0 0 700 470" role="img" aria-label="Goalkeeper on the goal line">
+        <rect x="20" y="20" width="660" height="430" rx="24" class="field"/>
+        <line x1="275" y1="70" x2="425" y2="70" class="goal"/>
+        <circle cx="350" cy="86" r="18" class="keeper"/>
+        <text x="378" y="92" class="small-label">G on goal line</text>
+        <circle cx="350" cy="390" r="10" class="player playerA"/>
+        <line x1="350" y1="390" x2="275" y2="70" class="ray rayA"/>
+        <line x1="350" y1="390" x2="425" y2="70" class="ray rayA"/>
+        <path d="M335 265 A55 55 0 0 1 365 265" class="arc"/>
+        <text x="350" y="250" text-anchor="middle" class="small-label">open goal angle is larger</text>
+      </svg>
+    </div>
+
+    <div class="card">
+      <h3>Visual 2 — Goalkeeper moves forward</h3>
+      <svg viewBox="0 0 700 470" role="img" aria-label="Goalkeeper moved forward">
+        <rect x="20" y="20" width="660" height="430" rx="24" class="field"/>
+        <line x1="275" y1="70" x2="425" y2="70" class="goal"/>
+        <circle cx="350" cy="205" r="24" class="keeper"/>
+        <text x="384" y="210" class="small-label">G moved forward</text>
+        <circle cx="350" cy="390" r="10" class="player playerA"/>
+        <line x1="350" y1="390" x2="275" y2="70" class="ray rayA"/>
+        <line x1="350" y1="390" x2="425" y2="70" class="ray rayA"/>
+        <path d="M323 302 A82 82 0 0 1 377 302" class="arc"/>
+        <text x="350" y="286" text-anchor="middle" class="small-label">blocked angle becomes larger</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container formula-grid">
+    <div class="card">
+      <h3>Simple blocked-angle model</h3>
+      <div class="formula">α = 2 tan<sup>−1</sup>((g / 2) / d<sub>g</sub>)</div>
+      <div class="explain">
+        <p><strong>What the symbols mean:</strong></p>
+        <ul class="tight">
+          <li><strong>α</strong> = angle blocked by the goalkeeper</li>
+          <li><strong>g</strong> = effective goalkeeper width or reach</li>
+          <li><strong>d<sub>g</sub></strong> = distance from shooter to goalkeeper</li>
+        </ul>
+        <p><strong>Meaning:</strong> when the goalkeeper moves closer to the shooter, <strong>d<sub>g</sub></strong> becomes smaller, so the blocked angle becomes bigger.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Visual 3 — Simple explanation in words</h3>
+      <div class="number-steps">
+        <div class="step"><span class="n">1</span><div>If the goalkeeper stays deep, the shooter sees more open space around them.</div></div>
+        <div class="step"><span class="n">2</span><div>If the goalkeeper moves forward, the shooter sees the goalkeeper taking more of the goal opening.</div></div>
+        <div class="step"><span class="n">3</span><div>So goalkeeper positioning is also a geometry problem.</div></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" style="margin-top:22px">
+    <div class="card">
+      <h3>Worked calculation example</h3>
+      <p class="muted">This is a simple model to show the idea. I assume the goalkeeper effectively blocks about 1.6 m of width.</p>
+      <div class="calc-grid">
+        <div class="calc-box">
+          <h4>Goalkeeper deeper</h4>
+          <div class="mathline">Use α = 2 tan<sup>−1</sup>((g/2) / d<sub>g</sub>)</div>
+          <div class="mathline">g = 1.6 m, so g/2 = 0.8 m</div>
+          <div class="mathline">If d<sub>g</sub> = 18 m:</div>
+          <div class="mathline">α = 2 tan<sup>−1</sup>(0.8 / 18)</div>
+          <div class="mathline">= 2 tan<sup>−1</sup>(0.0444)</div>
+          <div class="mathline"><span class="muted-strong">α ≈ 5.09°</span></div>
+        </div>
+        <div class="calc-box">
+          <h4>Goalkeeper moves forward</h4>
+          <div class="mathline">If the keeper moves closer and d<sub>g</sub> = 14 m:</div>
+          <div class="mathline">α = 2 tan<sup>−1</sup>(0.8 / 14)</div>
+          <div class="mathline">= 2 tan<sup>−1</sup>(0.0571)</div>
+          <div class="mathline"><span class="muted-strong">α ≈ 6.54°</span></div>
+        </div>
+        <div class="calc-box">
+          <h4>What changed?</h4>
+          <p>The goalkeeper width stayed the same, but the distance from the shooter to the goalkeeper became smaller. That makes the blocked angle bigger.</p>
+        </div>
+        <div class="calc-box">
+          <h4>Meaning in soccer</h4>
+          <p>When the goalkeeper steps forward, the player sees less open goal around them. So goalkeeper positioning changes the geometry of the shot.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="card">
+      <h3>What I learned from this investigation</h3>
+      <p>
+        I first thought my topic was only about the shooter, but this part made me see that the goalkeeper changes the geometry too.
+        A shot can become harder not only because of the player’s position, but also because the goalkeeper reduces the visible opening.
+      </p>
+      <div class="pager">
+        <a class="ghost-btn" href="investigation2.html">Previous: Investigation 2</a>
+        <a class="button" href="create.html">Next: Create</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+  <footer><div class="container">Geometry in the World Midterm · Abu Bakar Siddik</div></footer>
+</body>
+</html>

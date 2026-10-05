@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create | Geometry of Scoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">Geometry of Scoring</a>
+    <nav>
+      <a href="index.html" class="">Home</a>
+      <a href="notice.html" class="">1. Notice</a>
+      <a href="investigation1.html" class="">2.1 Angle</a>
+      <a href="investigation2.html" class="">2.2 Distance</a>
+      <a href="investigation3.html" class="">2.3 Goalkeeper</a>
+      <a href="create.html" class="active">3. Create</a>
+      <a href="reflection.html" class="">4. Reflect</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+<section class="page-head"><div class="container"><div class="card">
+  <span class="kicker">Section 3</span>
+  <h2>Create — Soccer Shot Opportunity Map</h2>
+  <p class="section-intro">My creation is a visual summary of the investigation. It turns my findings into a field map that shows where the geometric shooting chance is stronger or weaker.</p>
+</div></div></section>
+
+<section class="section">
+  <div class="container">
+    <div class="card real-evidence">
+      <h3>From real field to mathematical creation</h3>
+      <div class="photo-grid">
+        <div><img src="images/goal-front.jpeg" class="project-photo medium" alt="Front view of goal used as a project reference"><p class="photo-caption">Real goal: the fixed object I started from.</p></div>
+        <div><img src="images/center-shot-pointing.jpeg" class="project-photo medium" alt="Ball facing the goal used as a shooting reference"><p class="photo-caption">Real shooting view: this helped me think about the visible opening of the goal.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container two-col">
+    <div class="card">
+      <h3>Visual 1 — Opportunity map</h3>
+      <div class="map">
+        <div class="goal-mark"></div>
+        <div class="zone large">LARGE ANGLE</div>
+        <div class="zone medium left">MEDIUM</div>
+        <div class="zone medium right">MEDIUM</div>
+        <div class="zone small left">SMALL</div>
+        <div class="zone small right">SMALL</div>
+        <div class="center-circle"></div>
+      </div>
+      <div class="legend">
+        <span><i class="lg large"></i> Large angle</span>
+        <span><i class="lg medium"></i> Medium angle</span>
+        <span><i class="lg small"></i> Small angle</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Visual 2 — Why I divided it this way</h3>
+      <svg viewBox="0 0 700 520" role="img" aria-label="Map explanation with three example shooters">
+        <rect x="20" y="20" width="660" height="480" rx="24" class="field"/>
+        <line x1="280" y1="72" x2="420" y2="72" class="goal"/>
+        <circle cx="280" cy="72" r="8" class="post"/>
+        <circle cx="420" cy="72" r="8" class="post"/>
+
+        <circle cx="350" cy="240" r="10" class="player playerA"/>
+        <circle cx="235" cy="320" r="10" class="player playerB"/>
+        <circle cx="525" cy="330" r="10" class="player playerC"/>
+
+        <line x1="350" y1="240" x2="280" y2="72" class="ray rayA"/>
+        <line x1="350" y1="240" x2="420" y2="72" class="ray rayA"/>
+
+        <line x1="235" y1="320" x2="280" y2="72" class="ray rayB"/>
+        <line x1="235" y1="320" x2="420" y2="72" class="ray rayB"/>
+
+        <line x1="525" y1="330" x2="280" y2="72" class="ray rayC"/>
+        <line x1="525" y1="330" x2="420" y2="72" class="ray rayC"/>
+
+        <text x="368" y="245" class="label">large</text>
+        <text x="145" y="326" class="label">medium</text>
+        <text x="544" y="355" class="label">small</text>
+      </svg>
+      <p class="muted">These examples show why the middle area is usually stronger and the wide area is weaker.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="card">
+      <h3>How my creation grows from the investigation</h3>
+      <div class="photo-grid">
+        <div>
+          <img src="images/player-b-farther-centered.png" class="project-photo medium" alt="Annotated farther but centered shooting image">
+          <p class="photo-caption">This image helped inspire the stronger center shooting zone in my final map.</p>
+        </div>
+        <div>
+          <img src="images/player-a-closer-wider.png" class="project-photo medium" alt="Annotated closer but wider shooting image">
+          <p class="photo-caption">This image helped inspire the weaker wide shooting zones in my final map.</p>
+        </div>
+      </div>
+      <div class="callout"><strong>Connection:</strong> My creation is not random. It comes directly from the geometry I investigated: center usually gives a bigger angle, wide areas usually give a smaller angle, and goalkeeper position can reduce the opening more.</div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container three-col">
+    <div class="card">
+      <h3>Choice 1</h3>
+      <p>I made the middle zone stronger because central positions usually give the largest visible angle to the goal.</p>
+    </div>
+    <div class="card">
+      <h3>Choice 2</h3>
+      <p>I used medium zones between the center and wide side because the shooting angle changes gradually, not suddenly.</p>
+    </div>
+    <div class="card">
+      <h3>Choice 3</h3>
+      <p>I used a map instead of only numbers because I wanted people to understand the idea quickly by looking at the field.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card" style="margin-top:22px">
+      <h3>What I hope people notice</h3>
+      <p>
+        I want someone looking at this map to notice that moving only a few meters sideways can change the shot geometry a lot.
+        I also want them to understand that scoring chance is not only about being close. Field position matters.
+      </p>
+      <div class="pager">
+        <a class="ghost-btn" href="investigation3.html">Previous: Investigation 3</a>
+        <a class="button" href="reflection.html">Next: Reflection</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+  <footer><div class="container">Geometry in the World Midterm · Abu Bakar Siddik</div></footer>
+</body>
+</html>
